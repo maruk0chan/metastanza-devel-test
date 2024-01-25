@@ -23,6 +23,88 @@
   <body>
     <!-- Add your site or application content here -->
     <p>Hello world! This is HTML5 Boilerplate.</p>
-    <script src="js/app.js"></script>
+
+    <togostanza--container>
+      <togostanza--data-source
+        url="http://127.0.0.1:5500/data.json"
+        receiver="togostanza-pagination-table, togostanza-barchart"
+        target-attribute="data-url"
+      ></togostanza--data-source>
+
+
+      <script type="module" src="http://localhost:8080/barchart.js" async></script>
+
+      <togostanza-barchart
+        data-url="http://127.0.0.1:5500/data.json"
+        data-type="json"
+        axis-x-key="prefecture"
+        axis-x-placement="bottom"
+        axis-x-title="都道府県"
+        axis-x-title_padding="25"
+        axis-x-ticks_label_angle="-45"
+        axis-x-ticks_interval=""
+        axis-x-ticks_labels_format=",.2r"
+        axis-x-gridlines_interval=""
+        axis-y-key="pop_2020"
+        axis-y-placement="left"
+        axis-y-title="人口"
+        axis-y-title_padding="40"
+        axis-y-ticks_label_angle="0"
+        axis-y-ticks_interval=""
+        axis-y-ticks_labels_format=""
+        axis-y-gridlines_interval=""
+        grouping-key="regional_block"
+        grouping-arrangement="stacked"
+        color_by-key="color"
+        error_bars-key="error"
+        tooltips-key="count"
+        legend-visible
+        legend-title="Category"
+        togostanza-custom_css_url=""
+      ></togostanza-barchart>
+
+      <script type="module" src="http://localhost:8080/pagination-table.js" async></script>
+
+      <togostanza-pagination-table
+        data-url="https://raw.githubusercontent.com/togostanza/togostanza-data/main/samples/json/pagination-table.disease-gwas.json"
+        data-type="json"
+        width=""
+        fixed-columns="1"
+        padding="0px"
+        page-size-option="10,20,50,100"
+        page-slider="true"
+        columns="[{&quot;id&quot;:&quot;prefecture&quot;,&quot;label&quot;:&quot;都道府県&quot;},{&quot;id&quot;:&quot;regional_block&quot;,&quot;label&quot;:&quot;地域&quot;},{&quot;id&quot;:&quot;pop_2011&quot;,&quot;label&quot;:&quot;人口（2011）&quot;},{&quot;id&quot;:&quot;pop_2012&quot;,&quot;label&quot;:&quot;人口（2012）&quot;},{&quot;id&quot;:&quot;pop_2013&quot;,&quot;label&quot;:&quot;人口（2013）&quot;},{&quot;id&quot;:&quot;pop_2014&quot;,&quot;label&quot;:&quot;人口（2014）&quot;},{&quot;id&quot;:&quot;pop_2015&quot;,&quot;label&quot;:&quot;人口（2015）&quot;},{&quot;id&quot;:&quot;pop_2016&quot;,&quot;label&quot;:&quot;人口（2016）&quot;},{&quot;id&quot;:&quot;pop_2017&quot;,&quot;label&quot;:&quot;人口（2017）&quot;},{&quot;id&quot;:&quot;pop_2018&quot;,&quot;label&quot;:&quot;人口（2018）&quot;},{&quot;id&quot;:&quot;pop_2019&quot;,&quot;label&quot;:&quot;人口（2019）&quot;},{&quot;id&quot;:&quot;pop_2020&quot;,&quot;label&quot;:&quot;人口（2020）&quot;},{&quot;id&quot;:&quot;income_2011&quot;,&quot;label&quot;:&quot;収入（2011）&quot;},{&quot;id&quot;:&quot;income_2012&quot;,&quot;label&quot;:&quot;収入（2012）&quot;},{&quot;id&quot;:&quot;income_2013&quot;,&quot;label&quot;:&quot;収入（2013）&quot;},{&quot;id&quot;:&quot;income_2014&quot;,&quot;label&quot;:&quot;収入（2014）&quot;},{&quot;id&quot;:&quot;income_2015&quot;,&quot;label&quot;:&quot;収入（2015）&quot;},{&quot;id&quot;:&quot;income_2016&quot;,&quot;label&quot;:&quot;収入（2016）&quot;},{&quot;id&quot;:&quot;income_2017&quot;,&quot;label&quot;:&quot;収入（2017）&quot;},{&quot;id&quot;:&quot;income_2018&quot;,&quot;label&quot;:&quot;収入（2018）&quot;},{&quot;id&quot;:&quot;income_2019&quot;,&quot;label&quot;:&quot;収入（2019）&quot;},{&quot;id&quot;:&quot;income_2020&quot;,&quot;label&quot;:&quot;収入（2020）&quot;}]"
+        togostanza-custom_css_url=""
+      ></togostanza-pagination-table>
+
+
+
+
+
+
+    <script type="text/javascript">
+      const stanzaElement =
+        document.getElementsByTagName("togostanza-__test1")[0];
+
+      stanzaElement.addEventListener("valueChanged", (event) => {
+        // console.log("event received", event);
+        // console.log(event.detail); // {value: 42}
+      });
+
+      setTimeout(() => {
+
+        const stanzaElement4 =
+        document.getElementsByTagName("togostanza-__test4")[0];
+        const stanzaElement5 =
+        document.getElementsByTagName("togostanza-__test5")[0];
+        // console.log(stanzaElement4)
+        // console.log(stanzaElement4.stanzaInstance)
+        // console.log(stanzaElement4.stanzaInstance.data)
+        // console.log(stanzaElement5.stanzaInstance.data)
+        // console.log(stanzaElement4.stanzaInstance.data == stanzaElement5.stanzaInstance.data)
+
+      }, 1000)
+
+    </script>
   </body>
 </html>
