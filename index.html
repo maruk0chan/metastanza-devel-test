@@ -31,8 +31,11 @@
         target-attribute="data-url"
       ></togostanza--data-source>
 
-
-      <script type="module" src="http://localhost:8080/barchart.js" async></script>
+      <script
+        type="module"
+        src="http://localhost:8080/barchart.js"
+        async
+      ></script>
 
       <togostanza-barchart
         data-url="http://127.0.0.1:5500/data.json"
@@ -63,7 +66,11 @@
         togostanza-custom_css_url=""
       ></togostanza-barchart>
 
-      <script type="module" src="http://localhost:8080/pagination-table.js" async></script>
+      <script
+        type="module"
+        src="http://localhost:8080/pagination-table.js"
+        async
+      ></script>
 
       <togostanza-pagination-table
         data-url="https://raw.githubusercontent.com/togostanza/togostanza-data/main/samples/json/pagination-table.disease-gwas.json"
@@ -73,38 +80,9 @@
         padding="0px"
         page-size-option="10,20,50,100"
         page-slider="true"
-        columns="[{&quot;id&quot;:&quot;prefecture&quot;,&quot;label&quot;:&quot;都道府県&quot;},{&quot;id&quot;:&quot;regional_block&quot;,&quot;label&quot;:&quot;地域&quot;},{&quot;id&quot;:&quot;pop_2011&quot;,&quot;label&quot;:&quot;人口（2011）&quot;},{&quot;id&quot;:&quot;pop_2012&quot;,&quot;label&quot;:&quot;人口（2012）&quot;},{&quot;id&quot;:&quot;pop_2013&quot;,&quot;label&quot;:&quot;人口（2013）&quot;},{&quot;id&quot;:&quot;pop_2014&quot;,&quot;label&quot;:&quot;人口（2014）&quot;},{&quot;id&quot;:&quot;pop_2015&quot;,&quot;label&quot;:&quot;人口（2015）&quot;},{&quot;id&quot;:&quot;pop_2016&quot;,&quot;label&quot;:&quot;人口（2016）&quot;},{&quot;id&quot;:&quot;pop_2017&quot;,&quot;label&quot;:&quot;人口（2017）&quot;},{&quot;id&quot;:&quot;pop_2018&quot;,&quot;label&quot;:&quot;人口（2018）&quot;},{&quot;id&quot;:&quot;pop_2019&quot;,&quot;label&quot;:&quot;人口（2019）&quot;},{&quot;id&quot;:&quot;pop_2020&quot;,&quot;label&quot;:&quot;人口（2020）&quot;},{&quot;id&quot;:&quot;income_2011&quot;,&quot;label&quot;:&quot;収入（2011）&quot;},{&quot;id&quot;:&quot;income_2012&quot;,&quot;label&quot;:&quot;収入（2012）&quot;},{&quot;id&quot;:&quot;income_2013&quot;,&quot;label&quot;:&quot;収入（2013）&quot;},{&quot;id&quot;:&quot;income_2014&quot;,&quot;label&quot;:&quot;収入（2014）&quot;},{&quot;id&quot;:&quot;income_2015&quot;,&quot;label&quot;:&quot;収入（2015）&quot;},{&quot;id&quot;:&quot;income_2016&quot;,&quot;label&quot;:&quot;収入（2016）&quot;},{&quot;id&quot;:&quot;income_2017&quot;,&quot;label&quot;:&quot;収入（2017）&quot;},{&quot;id&quot;:&quot;income_2018&quot;,&quot;label&quot;:&quot;収入（2018）&quot;},{&quot;id&quot;:&quot;income_2019&quot;,&quot;label&quot;:&quot;収入（2019）&quot;},{&quot;id&quot;:&quot;income_2020&quot;,&quot;label&quot;:&quot;収入（2020）&quot;}]"
+        columns='[{"id":"prefecture","label":"都道府県"},{"id":"regional_block","label":"地域"},{"id":"pop_2011","label":"人口（2011）"},{"id":"pop_2012","label":"人口（2012）"},{"id":"pop_2013","label":"人口（2013）"},{"id":"pop_2014","label":"人口（2014）"},{"id":"pop_2015","label":"人口（2015）"},{"id":"pop_2016","label":"人口（2016）"},{"id":"pop_2017","label":"人口（2017）"},{"id":"pop_2018","label":"人口（2018）"},{"id":"pop_2019","label":"人口（2019）"},{"id":"pop_2020","label":"人口（2020）"},{"id":"income_2011","label":"収入（2011）"},{"id":"income_2012","label":"収入（2012）"},{"id":"income_2013","label":"収入（2013）"},{"id":"income_2014","label":"収入（2014）"},{"id":"income_2015","label":"収入（2015）"},{"id":"income_2016","label":"収入（2016）"},{"id":"income_2017","label":"収入（2017）"},{"id":"income_2018","label":"収入（2018）"},{"id":"income_2019","label":"収入（2019）"},{"id":"income_2020","label":"収入（2020）"}]'
         togostanza-custom_css_url=""
       ></togostanza-pagination-table>
-
-
-
-
-
-
-    <script type="text/javascript">
-      const stanzaElement =
-        document.getElementsByTagName("togostanza-__test1")[0];
-
-      stanzaElement.addEventListener("valueChanged", (event) => {
-        // console.log("event received", event);
-        // console.log(event.detail); // {value: 42}
-      });
-
-      setTimeout(() => {
-
-        const stanzaElement4 =
-        document.getElementsByTagName("togostanza-__test4")[0];
-        const stanzaElement5 =
-        document.getElementsByTagName("togostanza-__test5")[0];
-        // console.log(stanzaElement4)
-        // console.log(stanzaElement4.stanzaInstance)
-        // console.log(stanzaElement4.stanzaInstance.data)
-        // console.log(stanzaElement5.stanzaInstance.data)
-        // console.log(stanzaElement4.stanzaInstance.data == stanzaElement5.stanzaInstance.data)
-
-      }, 1000)
-
-    </script>
+    </togostanza--container>
   </body>
 </html>
