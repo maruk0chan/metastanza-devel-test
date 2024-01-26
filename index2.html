@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is HTML5 Boilerplate.</p>
+
+    <togostanza--container>
+      <togostanza--data-source
+        url="http://127.0.0.1:5500/data2.json"
+        receiver="togostanza-pagination-table, togostanza-barchart,togostanza-piechart"
+        target-attribute="data-url"
+      ></togostanza--data-source>
+
+      <script
+        type="module"
+        src="http://localhost:8080/piechart.js"
+        async
+      ></script>
+
+      <togostanza-piechart
+        data-url="http://127.0.0.1:5500/data2.json"
+        data-type="json"
+        data-value_key="count"
+        data-category_key="category"
+        legend-visible
+        legend-title="Population"
+      ></togostanza-piechart>
+
+      <script
+        type="module"
+        src="http://localhost:8080/barchart.js"
+        async
+      ></script>
+
+      <togostanza-barchart
+        data-url="http://127.0.0.1:5500/data2.json"
+        data-type="json"
+        axis-x-key="category"
+        axis-x-placement="bottom"
+        axis-x-title="都道府県"
+        axis-x-title_padding="25"
+        axis-x-ticks_label_angle="-45"
+        axis-x-ticks_interval=""
+        axis-x-ticks_labels_format=",.2r"
+        axis-x-gridlines_interval=""
+        axis-y-key="count"
+        axis-y-placement="left"
+        axis-y-title="人口"
+        axis-y-title_padding="40"
+        axis-y-ticks_label_angle="0"
+        axis-y-ticks_interval=""
+        axis-y-ticks_labels_format=""
+        axis-y-gridlines_interval=""
+        grouping-key="regional_block"
+        grouping-arrangement="stacked"
+        color_by-key="color"
+        error_bars-key="error"
+        tooltips-key="count"
+        legend-visible
+        legend-title="Category"
+        togostanza-custom_css_url=""
+      ></togostanza-barchart>
+
+      <!-- <script
+        type="module"
+        src="http://localhost:8080/pagination-table.js"
+        async
+      ></script>
+
+      <togostanza-pagination-table
+        data-url="https://raw.githubusercontent.com/togostanza/togostanza-data/main/samples/json/pagination-table.disease-gwas.json"
+        data-type="json"
+        width=""
+        fixed-columns="1"
+        padding="0px"
+        page-size-option="10,20,50,100"
+        page-slider="true"
+        columns='[{"id":"prefecture","label":"都道府県"},{"id":"regional_block","label":"地域"},{"id":"pop_2011","label":"人口（2011）"},{"id":"pop_2012","label":"人口（2012）"},{"id":"pop_2013","label":"人口（2013）"},{"id":"pop_2014","label":"人口（2014）"},{"id":"pop_2015","label":"人口（2015）"},{"id":"pop_2016","label":"人口（2016）"},{"id":"pop_2017","label":"人口（2017）"},{"id":"pop_2018","label":"人口（2018）"},{"id":"pop_2019","label":"人口（2019）"},{"id":"pop_2020","label":"人口（2020）"},{"id":"income_2011","label":"収入（2011）"},{"id":"income_2012","label":"収入（2012）"},{"id":"income_2013","label":"収入（2013）"},{"id":"income_2014","label":"収入（2014）"},{"id":"income_2015","label":"収入（2015）"},{"id":"income_2016","label":"収入（2016）"},{"id":"income_2017","label":"収入（2017）"},{"id":"income_2018","label":"収入（2018）"},{"id":"income_2019","label":"収入（2019）"},{"id":"income_2020","label":"収入（2020）"}]'
+        togostanza-custom_css_url=""
+      ></togostanza-pagination-table> -->
+    </togostanza--container>
+
+    <script type="text/javascript">
+      const stanzaElement =
+        document.getElementsByTagName("togostanza-__test1")[0];
+
+      stanzaElement.addEventListener("valueChanged", (event) => {
+        // console.log("event received", event);
+        // console.log(event.detail); // {value: 42}
+      });
+
+      setTimeout(() => {
+        const stanzaElement4 =
+          document.getElementsByTagName("togostanza-__test4")[0];
+        const stanzaElement5 =
+          document.getElementsByTagName("togostanza-__test5")[0];
+        // console.log(stanzaElement4)
+        // console.log(stanzaElement4.stanzaInstance)
+        // console.log(stanzaElement4.stanzaInstance.data)
+        // console.log(stanzaElement5.stanzaInstance.data)
+        // console.log(stanzaElement4.stanzaInstance.data == stanzaElement5.stanzaInstance.data)
+      }, 1000);
+    </script>
+  </body>
+</html>
