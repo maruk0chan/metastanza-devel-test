@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is HTML5 Boilerplate.</p>
+
+    <togostanza--container>
+      <togostanza--data-source
+        url="http://127.0.0.1:5500/miserables.json"
+        receiver="togostanza-chord-diagram,togostanza-force-graph,togostanzalayered-graph"
+        target-attribute="data-url"
+      ></togostanza--data-source>
+
+      <script
+        type="module"
+        src="http://127.0.0.1:8080/chord-diagram.js"
+        async
+      ></script>
+
+      <togostanza-chord-diagram
+        data-url="http://127.0.0.1:5500/miserables.json"
+        data-type="json"
+        togostanza-custom_css_url=""
+        node-label_key="id"
+        node-color_key="group"
+        nodes-sort-key="group"
+        nodes-sort-order="ascending"
+        edge-width-key="value"
+        edge-width-min="0.5"
+        edge-width-max="3"
+        tooltips-key="id"
+      ></togostanza-chord-diagram>
+
+      <script
+        type="module"
+        src="http://127.0.0.1:8080/force-graph.js"
+        async
+      ></script>
+
+      <togostanza-force-graph
+        data-url="http://127.0.0.1:5500/miserables.json"
+        data-type="json"
+        node-size_key=""
+        node-size_min="3"
+        node-size_max="6"
+        node-size_scale="square root"
+        node-color_key="group"
+        edge-width_key="value"
+        edge-width_min="1"
+        edge-width_max="1"
+        edge-width_scale="linear"
+        node-label_key="id"
+        node-tooltip_key="id"
+        togostanza-custom_css_url=""
+      ></togostanza-force-graph>
+
+      <script
+        type="module"
+        src="http://127.0.0.1:8080/layered-graph.js"
+        async
+      ></script>
+
+      <togostanza-layered-graph
+        data-url="http://127.0.0.1:5500/miserables.json"
+        data-type="json"
+        node-label_key="id"
+        nodes-sort-key="id"
+        nodes-sort-order="ascending"
+        node-size-key="group"
+        node-size-min="3"
+        node-size-max="6"
+        node-size-scale="sqrt"
+        node-color-key="group"
+        edge-width-key="value"
+        edge-width-min="0.5"
+        edge-width-max="3"
+        edge-width-scale="linear"
+        tooltips-key="id"
+        togostanza-custom_css_url=""
+      ></togostanza-layered-graph>
+    </togostanza--container>
+  </body>
+</html>
