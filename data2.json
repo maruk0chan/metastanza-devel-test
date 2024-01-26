@@ -1,0 +1,237 @@
+[
+  {
+    "__togostanza_id_dummy__": 0,
+    "category": "北海道",
+    "count": 5224614
+  },
+  {
+    "__togostanza_id_dummy__": 1,
+    "category": "青森県",
+    "count": 1237984
+  },
+  {
+    "__togostanza_id_dummy__": 2,
+    "category": "岩手県",
+    "count": 1210534
+  },
+  {
+    "__togostanza_id_dummy__": 3,
+    "category": "宮城県",
+    "count": 2301996
+  },
+  {
+    "__togostanza_id_dummy__": 4,
+    "category": "秋田県",
+    "count": 959502
+  },
+  {
+    "__togostanza_id_dummy__": 5,
+    "category": "山形県",
+    "count": 1068027
+  },
+  {
+    "__togostanza_id_dummy__": 6,
+    "category": "福島県",
+    "count": 1833152
+  },
+  {
+    "__togostanza_id_dummy__": 7,
+    "category": "茨城県",
+    "count": 2867009
+  },
+  {
+    "__togostanza_id_dummy__": 8,
+    "category": "栃木県",
+    "count": 1933146
+  },
+  {
+    "__togostanza_id_dummy__": 9,
+    "category": "群馬県",
+    "count": 1939110
+  },
+  {
+    "__togostanza_id_dummy__": 10,
+    "category": "埼玉県",
+    "count": 7344765
+  },
+  {
+    "__togostanza_id_dummy__": 11,
+    "category": "千葉県",
+    "count": 6284480
+  },
+  {
+    "__togostanza_id_dummy__": 12,
+    "category": "東京都",
+    "count": 14047594
+  },
+  {
+    "__togostanza_id_dummy__": 13,
+    "category": "神奈川県",
+    "count": 9237337
+  },
+  {
+    "__togostanza_id_dummy__": 14,
+    "category": "新潟県",
+    "count": 2201272
+  },
+  {
+    "__togostanza_id_dummy__": 15,
+    "category": "富山県",
+    "count": 1034814
+  },
+  {
+    "__togostanza_id_dummy__": 16,
+    "category": "石川県",
+    "count": 1132526
+  },
+  {
+    "__togostanza_id_dummy__": 17,
+    "category": "福井県",
+    "count": 766863
+  },
+  {
+    "__togostanza_id_dummy__": 18,
+    "category": "山梨県",
+    "count": 809974
+  },
+  {
+    "__togostanza_id_dummy__": 19,
+    "category": "長野県",
+    "count": 2048011
+  },
+  {
+    "__togostanza_id_dummy__": 20,
+    "category": "岐阜県",
+    "count": 1978742
+  },
+  {
+    "__togostanza_id_dummy__": 21,
+    "category": "静岡県",
+    "count": 3633202
+  },
+  {
+    "__togostanza_id_dummy__": 22,
+    "category": "愛知県",
+    "count": 7542415
+  },
+  {
+    "__togostanza_id_dummy__": 23,
+    "category": "三重県",
+    "count": 1770254
+  },
+  {
+    "__togostanza_id_dummy__": 24,
+    "category": "滋賀県",
+    "count": 1413610
+  },
+  {
+    "__togostanza_id_dummy__": 25,
+    "category": "京都府",
+    "count": 2578087
+  },
+  {
+    "__togostanza_id_dummy__": 26,
+    "category": "大阪府",
+    "count": 8837685
+  },
+  {
+    "__togostanza_id_dummy__": 27,
+    "category": "兵庫県",
+    "count": 5465002
+  },
+  {
+    "__togostanza_id_dummy__": 28,
+    "category": "奈良県",
+    "count": 1324473
+  },
+  {
+    "__togostanza_id_dummy__": 29,
+    "category": "和歌山県",
+    "count": 922584
+  },
+  {
+    "__togostanza_id_dummy__": 30,
+    "category": "鳥取県",
+    "count": 553407
+  },
+  {
+    "__togostanza_id_dummy__": 31,
+    "category": "島根県",
+    "count": 671126
+  },
+  {
+    "__togostanza_id_dummy__": 32,
+    "category": "岡山県",
+    "count": 1888432
+  },
+  {
+    "__togostanza_id_dummy__": 33,
+    "category": "広島県",
+    "count": 2799702
+  },
+  {
+    "__togostanza_id_dummy__": 34,
+    "category": "山口県",
+    "count": 1342059
+  },
+  {
+    "__togostanza_id_dummy__": 35,
+    "category": "徳島県",
+    "count": 719559
+  },
+  {
+    "__togostanza_id_dummy__": 36,
+    "category": "香川県",
+    "count": 950244
+  },
+  {
+    "__togostanza_id_dummy__": 37,
+    "category": "愛媛県",
+    "count": 1334841
+  },
+  {
+    "__togostanza_id_dummy__": 38,
+    "category": "高知県",
+    "count": 691527
+  },
+  {
+    "__togostanza_id_dummy__": 39,
+    "category": "福岡県",
+    "count": 5135214
+  },
+  {
+    "__togostanza_id_dummy__": 40,
+    "category": "佐賀県",
+    "count": 811442
+  },
+  {
+    "__togostanza_id_dummy__": 41,
+    "category": "長崎県",
+    "count": 1312317
+  },
+  {
+    "__togostanza_id_dummy__": 42,
+    "category": "熊本県",
+    "count": 1738301
+  },
+  {
+    "__togostanza_id_dummy__": 43,
+    "category": "大分県",
+    "count": 1123852
+  },
+  {
+    "__togostanza_id_dummy__": 44,
+    "category": "宮崎県",
+    "count": 1069576
+  },
+  {
+    "__togostanza_id_dummy__": 45,
+    "category": "鹿児島県",
+    "count": 1588256
+  },
+  {
+    "__togostanza_id_dummy__": 46,
+    "category": "沖縄県",
+    "count": 1467480
+  }
+]
