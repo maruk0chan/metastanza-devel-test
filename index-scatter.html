@@ -26,35 +26,21 @@
 
     <togostanza--container>
       <togostanza--data-source
-        url="http://127.0.0.1:5500/data3.json"
-        receiver="togostanza-barchart,togostanza-sunburst"
+        url="http://127.0.0.1:5500/data.json"
+        receiver="togostanza-scatter-plot, togostanza-barchart"
         target-attribute="data-url"
       ></togostanza--data-source>
 
       <script
         type="module"
-        src="http://127.0.0.1:8080/sunburst.js"
+        src="http://localhost:8080/barchart.js"
         async
       ></script>
 
-      <togostanza-sunburst
-        data-url="http://127.0.0.1:5500/data3.json"
-        data-type="json"
-        node-value_key="size"
-        node-label_key="label"
-        node-values_visible
-        node-levels_gap_width="2"
-        node-gap_width="8"
-        node-corner_radius="0"
-        scaling="By value"
-        max_depth="3"
-        togostanza-custom_css_url=""
-      ></togostanza-sunburst>
-
       <togostanza-barchart
-        data-url="http://127.0.0.1:5500/data3.json"
+        data-url="http://127.0.0.1:5500/data.json"
         data-type="json"
-        axis-x-key="value"
+        axis-x-key="prefecture"
         axis-x-placement="bottom"
         axis-x-title="都道府県"
         axis-x-title_padding="25"
@@ -62,9 +48,9 @@
         axis-x-ticks_interval=""
         axis-x-ticks_labels_format=",.2r"
         axis-x-gridlines_interval=""
-        axis-y-key="size"
+        axis-y-key="income_2020"
         axis-y-placement="left"
-        axis-y-title="人口"
+        axis-y-title="Income 2020"
         axis-y-title_padding="40"
         axis-y-ticks_label_angle="0"
         axis-y-ticks_interval=""
@@ -79,28 +65,42 @@
         legend-title="Category"
         togostanza-custom_css_url=""
       ></togostanza-barchart>
+
+      <script
+        type="module"
+        src="http://127.0.0.1:8080/scatter-plot.js"
+        async
+      ></script>
+
+      <togostanza-scatter-plot
+        data-url="http://127.0.0.1:5500/data.json"
+        data-type="json"
+        togostanza-custom_css_url=""
+        axis-x-key="pop_2020"
+        axis-x-title="Population 2020"
+        axis-x-title_padding="20"
+        axis-x-ticks_label_angle="0"
+        axis-x-scale="linear"
+        axis-x-ticks_interval=""
+        axis-x-ticks_interval_units="none"
+        axis-x-ticks_labels_format=",.2r"
+        axis-x-gridlines_interval=""
+        axis-x-gridlines_interval_units="none"
+        axis-y-key="income_2020"
+        axis-y-title="Income 2020"
+        axis-y-title_padding="45"
+        axis-y-ticks_label_angle="0"
+        axis-y-scale="linear"
+        axis-y-ticks_interval=""
+        axis-y-ticks_labels_format=",.2r"
+        axis-y-gridlines_interval=""
+        node-size_key="pop_2020"
+        node-size_min="3"
+        node-size_max="10"
+        legend-visible
+        legend-title="Population"
+        tooltips-key="prefecture"
+      ></togostanza-scatter-plot>
     </togostanza--container>
-
-    <script type="text/javascript">
-      const stanzaElement =
-        document.getElementsByTagName("togostanza-__test1")[0];
-
-      stanzaElement.addEventListener("valueChanged", (event) => {
-        // console.log("event received", event);
-        // console.log(event.detail); // {value: 42}
-      });
-
-      setTimeout(() => {
-        const stanzaElement4 =
-          document.getElementsByTagName("togostanza-__test4")[0];
-        const stanzaElement5 =
-          document.getElementsByTagName("togostanza-__test5")[0];
-        // console.log(stanzaElement4)
-        // console.log(stanzaElement4.stanzaInstance)
-        // console.log(stanzaElement4.stanzaInstance.data)
-        // console.log(stanzaElement5.stanzaInstance.data)
-        // console.log(stanzaElement4.stanzaInstance.data == stanzaElement5.stanzaInstance.data)
-      }, 1000);
-    </script>
   </body>
 </html>
