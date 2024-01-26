@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is HTML5 Boilerplate.</p>
+
+    <togostanza--container>
+      <togostanza--data-source
+        url="http://127.0.0.1:5500/data3.json"
+        receiver="togostanza-barchart,togostanza-sunburst"
+        target-attribute="data-url"
+      ></togostanza--data-source>
+
+      <script
+        type="module"
+        src="http://127.0.0.1:8080/sunburst.js"
+        async
+      ></script>
+
+      <togostanza-sunburst
+        data-url="http://127.0.0.1:5500/data3.json"
+        data-type="json"
+        node-value_key="size"
+        node-label_key="label"
+        node-values_visible
+        node-levels_gap_width="2"
+        node-gap_width="8"
+        node-corner_radius="0"
+        scaling="By value"
+        max_depth="3"
+        togostanza-custom_css_url=""
+      ></togostanza-sunburst>
+
+      <togostanza-barchart
+        data-url="http://127.0.0.1:5500/data3.json"
+        data-type="json"
+        axis-x-key="value"
+        axis-x-placement="bottom"
+        axis-x-title="都道府県"
+        axis-x-title_padding="25"
+        axis-x-ticks_label_angle="-45"
+        axis-x-ticks_interval=""
+        axis-x-ticks_labels_format=",.2r"
+        axis-x-gridlines_interval=""
+        axis-y-key="size"
+        axis-y-placement="left"
+        axis-y-title="人口"
+        axis-y-title_padding="40"
+        axis-y-ticks_label_angle="0"
+        axis-y-ticks_interval=""
+        axis-y-ticks_labels_format=""
+        axis-y-gridlines_interval=""
+        grouping-key="regional_block"
+        grouping-arrangement="stacked"
+        color_by-key="color"
+        error_bars-key="error"
+        tooltips-key="count"
+        legend-visible
+        legend-title="Category"
+        togostanza-custom_css_url=""
+      ></togostanza-barchart>
+    </togostanza--container>
+
+    <script type="text/javascript">
+      const stanzaElement =
+        document.getElementsByTagName("togostanza-__test1")[0];
+
+      stanzaElement.addEventListener("valueChanged", (event) => {
+        // console.log("event received", event);
+        // console.log(event.detail); // {value: 42}
+      });
+
+      setTimeout(() => {
+        const stanzaElement4 =
+          document.getElementsByTagName("togostanza-__test4")[0];
+        const stanzaElement5 =
+          document.getElementsByTagName("togostanza-__test5")[0];
+        // console.log(stanzaElement4)
+        // console.log(stanzaElement4.stanzaInstance)
+        // console.log(stanzaElement4.stanzaInstance.data)
+        // console.log(stanzaElement5.stanzaInstance.data)
+        // console.log(stanzaElement4.stanzaInstance.data == stanzaElement5.stanzaInstance.data)
+      }, 1000);
+    </script>
+  </body>
+</html>
