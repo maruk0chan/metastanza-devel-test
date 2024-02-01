@@ -1,56 +1,45 @@
 [
   {
-    "__togostanza_id_dummy__": 0,
     "category": "北海道",
     "count": 5224614
   },
   {
-    "__togostanza_id_dummy__": 1,
     "category": "青森県",
     "count": 1237984
   },
   {
-    "__togostanza_id_dummy__": 2,
     "category": "岩手県",
     "count": 1210534
   },
   {
-    "__togostanza_id_dummy__": 3,
     "category": "宮城県",
     "count": 2301996
   },
   {
-    "__togostanza_id_dummy__": 4,
     "category": "秋田県",
     "count": 959502
   },
   {
-    "__togostanza_id_dummy__": 5,
     "category": "山形県",
     "count": 1068027
   },
   {
-    "__togostanza_id_dummy__": 6,
     "category": "福島県",
     "count": 1833152
   },
   {
-    "__togostanza_id_dummy__": 7,
     "category": "茨城県",
     "count": 2867009
   },
   {
-    "__togostanza_id_dummy__": 8,
     "category": "栃木県",
     "count": 1933146
   },
   {
-    "__togostanza_id_dummy__": 9,
     "category": "群馬県",
     "count": 1939110
   },
   {
-    "__togostanza_id_dummy__": 10,
     "category": "埼玉県",
     "count": 7344765
   }
