@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html class="no-js" lang="">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title></title>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="" />
+
+    <meta property="og:title" content="" />
+    <meta property="og:type" content="" />
+    <meta property="og:url" content="" />
+    <meta property="og:image" content="" />
+
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="icon.png" />
+
+    <link rel="manifest" href="site.webmanifest" />
+    <meta name="theme-color" content="#fafafa" />
+  </head>
+
+  <body>
+    <!-- Add your site or application content here -->
+    <p>Hello world! This is HTML5 Boilerplate.</p>
+
+    <togostanza--container style="display: flex">
+      <togostanza--data-source
+        url="http://127.0.0.1:5500/tree-data.json"
+        receiver="togostanza-treemap,togostanza-sunburst,togostanza-column-tree"
+        target-attribute="data-url"
+      ></togostanza--data-source>
+
+      <script
+        type="module"
+        src="http://localhost:8080/treemap.js"
+        async
+      ></script>
+
+      <togostanza-treemap
+        data-url="http://127.0.0.1:5500/tree-data.json"
+        data-type="json"
+        node-label_key="label"
+        node-value_key="size"
+        node-log_scale
+        togostanza-custom_css_url=""
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+      ></togostanza-treemap>
+
+      <script
+        type="module"
+        src="http://localhost:8080/sunburst.js"
+        async
+      ></script>
+
+      <togostanza-sunburst
+        data-url="http://127.0.0.1:5500/tree-data.json"
+        data-type="json"
+        node-value_key="size"
+        node-label_key="label"
+        node-values_visible
+        node-levels_gap_width="2"
+        node-gap_width="8"
+        node-corner_radius="0"
+        scaling="By value"
+        max_depth="3"
+        togostanza-custom_css_url=""
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+      ></togostanza-sunburst>
+
+      <script
+        type="module"
+        src="http://localhost:8080/column-tree.js"
+        async
+      ></script>
+
+      <togostanza-column-tree
+        data-url="http://127.0.0.1:5500/tree-data.json"
+        data-type="json"
+        node-label_key="label"
+        node-value_key="size"
+        node-value_alignment="horizontal"
+        node-value_fallback="no data"
+        search_key="value"
+        togostanza-custom_css_url=""
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+      ></togostanza-column-tree>
+    </togostanza--container>
+  </body>
+</html>
