@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Namedmap Event</title>
+  </head>
+  <body>
+    <togostanza--container>
+      <togostanza--data-source
+        url="http://127.0.0.1:5500/namedmap.json"
+        receiver="togostanza-named-map, togostanza-barchart, togostanza-piechart"
+        target-attribute="data-url"
+      ></togostanza--data-source>
+
+      <script
+        type="module"
+        src="http://localhost:8080/named-map.js"
+        async
+      ></script>
+      <style>
+        togostanza-named-map {
+          --togostanza-canvas-width: 600;
+          --togostanza-canvas-height: 500;
+          --togostanza-canvas-padding: ;
+        }
+      </style>
+      <togostanza-named-map
+        data-url="http://12.0.0.1:5500/namedmap.json"
+        data-type="json"
+        data-region="world"
+        data-layer="countries"
+        data-user_topojson=""
+        data-property="id"
+        legend-visible
+        legend-title="value"
+        legend-levels_number="5"
+        area-color_key="id"
+        area-color_value="rate"
+        area-color_min="#6590e6"
+        area-color_mid="#ffffff"
+        area-color_max="#F75976"
+        area-value_min="0"
+        area-value_mid='""'
+        area-value_max="1"
+        tooltips-key="rate"
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+        togostanza-custom_css_url=""
+      ></togostanza-named-map>
+
+      <script
+        type="module"
+        src="http://localhost:8080/barchart.js"
+        async
+      ></script>
+
+      <style>
+        togostanza-barchart {
+          --togostanza-canvas-width: 2000;
+        }
+      </style>
+
+      <togostanza-barchart
+        data-url="http://127.0.0.1:5500/namedmap.json"
+        data-type="json"
+        axis-x-key="name"
+        axis-x-placement="bottom"
+        axis-x-title="Category"
+        axis-x-title_padding="25"
+        axis-x-ticks_label_angle="-45"
+        axis-x-ticks_interval=""
+        axis-x-ticks_labels_format=",.2r"
+        axis-x-gridlines_interval=""
+        axis-y-key="rate"
+        axis-y-placement="left"
+        axis-y-title="Data"
+        axis-y-title_padding="40"
+        axis-y-ticks_label_angle="0"
+        axis-y-ticks_interval=""
+        axis-y-ticks_labels_format=""
+        axis-y-gridlines_interval=""
+        grouping-key=""
+        grouping-arrangement="grouped"
+        color_by-key=""
+        error_bars-key="error"
+        tooltips-key="count"
+        legend-visible
+        legend-title="Category"
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+        togostanza-custom_css_url=""
+      ></togostanza-barchart>
+
+      <script
+        type="module"
+        src="http://localhost:8080/piechart.js"
+        async
+      ></script>
+      <togostanza-piechart
+        data-url="http://127.0.0.1:5500/namedmap.json"
+        data-type="json"
+        data-value_key="rate"
+        data-category_key="name"
+        legend-visible
+        legend-title="Population"
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+      ></togostanza-piechart>
+    </togostanza--container>
+  </body>
+</html>

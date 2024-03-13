@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>heatmap Event</title>
+    <style>
+      body {
+        max-width: 70%;
+      }
+      togostanza--container {
+        display: flex;
+        /* flex-direction: column; */
+      }
+    </style>
+  </head>
+  <body>
+    <togostanza--container>
+      <togostanza--data-source
+        url="http://127.0.0.1:5500/heatmap.json"
+        receiver="togostanza-heatmap, togostanza-barchart, togostanza-piechart"
+        target-attribute="data-url"
+      ></togostanza--data-source>
+
+      <script
+        type="module"
+        src="http://localhost:8080/heatmap.js"
+        async
+      ></script>
+
+      <style>
+        togostanza-heatmap {
+          --togostanza-canvas-width: 350;
+          --togostanza-canvas-height: 350;
+        }
+      </style>
+      <togostanza-heatmap
+        data-url="http://127.0.0.1:5500/heatmap.jso"
+        data-type="json"
+        legend-visible
+        legend-title="value"
+        legend-levels_number="10"
+        axis-x-key="group"
+        axis-x-title=""
+        axis-x-title_padding="40"
+        axis-x-ticks_labels_angle="0"
+        axis-x-placement="bottom"
+        axis-y-key="variable"
+        axis-y-title=""
+        axis-y-title_padding="40"
+        axis-y-ticks_labels_angle="0"
+        axis-y-placement="left"
+        cell-color_key="value"
+        cell-color_min="#6590e6"
+        cell-color_mid="#ffffff"
+        cell-color_max="#F75976"
+        cell-value_min="-50"
+        cell-value_mid="0"
+        cell-value_max="100"
+        tooltips-key="value"
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+        togostanza-custom_css_url=""
+      ></togostanza-heatmap>
+
+      <script
+        type="module"
+        src="http://localhost:8080/barchart.js"
+        async
+      ></script>
+      <togostanza-barchart
+        data-url="http://127.0.0.1:5500/heatmap.json"
+        data-type="json"
+        axis-x-key="group"
+        axis-x-placement="bottom"
+        axis-x-title="Category"
+        axis-x-title_padding="25"
+        axis-x-ticks_label_angle="-45"
+        axis-x-ticks_interval=""
+        axis-x-ticks_labels_format=",.2r"
+        axis-x-gridlines_interval=""
+        axis-y-key="value"
+        axis-y-placement="left"
+        axis-y-title="Data"
+        axis-y-title_padding="40"
+        axis-y-ticks_label_angle="0"
+        axis-y-ticks_interval=""
+        axis-y-ticks_labels_format=""
+        axis-y-gridlines_interval=""
+        grouping-key="variable"
+        grouping-arrangement="grouped"
+        color_by-key="color"
+        error_bars-key="error"
+        tooltips-key="count"
+        legend-visible
+        legend-title="Category"
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+        togostanza-custom_css_url=""
+      ></togostanza-barchart>
+
+      <script
+        type="module"
+        src="http://localhost:8080/piechart.js"
+        async
+      ></script>
+      <togostanza-piechart
+        data-url="http://127.0.0.1:5500/heatmap.json"
+        data-type="json"
+        data-value_key="value"
+        data-category_key="group"
+        legend-visible
+        legend-title="Population"
+        event-incoming_change_selected_nodes
+        event-outgoing_change_selected_nodes
+      ></togostanza-piechart>
+    </togostanza--container>
+  </body>
+</html>
